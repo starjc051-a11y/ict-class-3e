@@ -1,130 +1,169 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Saya</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            height: 100vh;
-            background: linear-gradient(135deg, #000000, #ff4da6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+body {
+    background: #f2f2f2;
+    color: #333;
+}
 
-        .login-container {
-            background: #111;
-            padding: 40px;
-            width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 77, 166, 0.6);
-        }
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
 
-        .login-container h2 {
-            color: #ff4da6;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+nav {
+    margin-top: 15px;
+}
 
-        .input-group {
-            position: relative;
-            margin-bottom: 30px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
 
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid #ff4da6;
-            outline: none;
-            color: #fff;
-            font-size: 16px;
-        }
+nav a:hover {
+    color: #00adb5;
+}
 
-        .input-group label {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            color: #aaa;
-            pointer-events: none;
-            transition: 0.3s;
-        }
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        .input-group input:focus ~ label,
-        .input-group input:valid ~ label {
-            top: -15px;
-            color: #ff4da6;
-            font-size: 12px;
-        }
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #ff4da6;
-            border: none;
-            border-radius: 25px;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.profile-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        button:hover {
-            background: #ff1a8c;
-        }
+.profile-box p {
+    margin: 10px 0;
+}
 
-        .register-text {
-            margin-top: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 14px;
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .register-text a {
-            color: #ff4da6;
-            text-decoration: none;
-        }
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
 
-        .register-text a:hover {
-            text-decoration: underline;
-        }
-    </style>
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background: #25D366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    background: #1ebe5d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+</style>
 </head>
-
 <body>
 
-<div class="login-container">
-    <h2>Login</h2>
-    <form>
-        <div class="input-group">
-            <input type="text" required>
-            <label>Username</label>
+<header>
+    <h1>Nama Kamu</h1>
+    <p>Web Developer | Freelancer</p>
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+</header>
+
+<section id="profil">
+    <h2>Profil Saya</h2>
+    <div class="profile-box">
+        <p><strong>Nama:</strong> Nama Lengkap Kamu</p>
+        <p><strong>Umur:</strong> 20 Tahun</p>
+        <p><strong>Alamat:</strong> Kota, Indonesia</p>
+        <p><strong>Email:</strong> emailkamu@gmail.com</p>
+        <p><strong>No WhatsApp:</strong> 08xxxxxxxxxx</p>
+        <p><strong>Tentang Saya:</strong> Saya adalah seorang web developer yang fokus membuat website modern dan responsif.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Project Saya</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Website Company Profile</h3>
+            <p>Membuat website profil perusahaan menggunakan HTML dan CSS.</p>
         </div>
 
-        <div class="input-group">
-            <input type="password" required>
-            <label>Password</label>
+        <div class="project-card">
+            <h3>Landing Page Produk</h3>
+            <p>Mendesain landing page untuk promosi produk UMKM.</p>
         </div>
 
-        <button type="submit">Masuk</button>
+        <div class="project-card">
+            <h3>Website Portfolio</h3>
+            <p>Membuat website portfolio pribadi yang responsif.</p>
+        </div>
+    </div>
+</section>
 
-        <p class="register-text">
-            Belum punya akun? <a href="#">Daftar</a>
-        </p>
-    </form>
-</div>
+<section id="contact">
+    <h2>Kontak Saya</h2>
+    <div class="contact-box">
+        <p>Hubungi saya melalui WhatsApp:</p>
+        <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Chat WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Nama Kamu. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
-
-
-
